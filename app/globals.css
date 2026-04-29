@@ -1,0 +1,27 @@
+:root {
+  --text: #1f2937;
+  --muted: #6b7280;
+  --brand: #b45309;
+  --brand-dark: #7c2d12;
+  --border: rgba(31, 41, 55, 0.1);
+  --panel: rgba(255, 252, 246, 0.82);
+  --shadow: 0 20px 45px rgba(31, 41, 55, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top left, rgba(180, 83, 9, 0.22), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(124, 45, 18, 0.18), transparent 24%),
+    linear-gradient(135deg, #f8f4ec 0%, #efe6d5 100%);
+}

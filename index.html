@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Chatbot</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="layout">
+    <section class="hero">
+      <p class="eyebrow">Customer Support</p>
+      <h1>Chatbot for your website</h1>
+      <p class="hero-copy">
+        This is a lightweight website chatbot UI built with plain HTML, CSS, and JavaScript.
+        It can answer common questions immediately and is structured so you can connect it to a real API later.
+      </p>
+    </section>
+
+    <section class="chat-shell" aria-label="Chatbot">
+      <div class="chat-header">
+        <div>
+          <p class="chat-label">Assistant</p>
+          <h2>Help Desk Bot</h2>
+        </div>
+        <span class="status-pill">Online</span>
+      </div>
+
+      <div id="chatMessages" class="chat-messages" aria-live="polite"></div>
+
+      <form id="chatForm" class="chat-form">
+        <label class="sr-only" for="chatInput">Type your message</label>
+        <input
+          id="chatInput"
+          name="message"
+          type="text"
+          placeholder="Ask about pricing, support, hours..."
+          autocomplete="off"
+          required
+        >
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+.shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 640px;
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  background: var(--panel);
+  backdrop-filter: blur(18px);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 24px;
+  border-bottom: 1px solid var(--border);
+  background: rgba(255, 250, 240, 0.9);
+}
+
+.label {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.header h2 {
+  margin: 6px 0 0;
+  font-size: 1.2rem;
+}
+
+.status {
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(180, 83, 9, 0.12);
+  color: var(--brand-dark);
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.messages {
+  flex: 1;
+  padding: 24px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.message {
+  max-width: 85%;
+  padding: 14px 16px;
+  border-radius: 20px;
+  animation: slideUp 220ms ease;
+}
+
+.message p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.bot {
+  align-self: flex-start;
+  background: #ffffff;
+  border: 1px solid var(--border);
+}
+
+.user {
+  align-self: flex-end;
+  background: #1f2937;
+  color: #ffffff;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  padding: 20px;
+  border-top: 1px solid var(--border);
+  background: rgba(255, 250, 240, 0.92);
+}
+
+.form input {
+  width: 100%;
+  border: 1px solid rgba(31, 41, 55, 0.14);
+  border-radius: 16px;
+  padding: 15px 16px;
+  font: inherit;
+  background: #ffffff;
+  color: var(--text);
+}
+
+.form input:focus {
+  outline: 2px solid rgba(180, 83, 9, 0.2);
+  border-color: rgba(180, 83, 9, 0.4);
+}
+
+.form button {
+  border: 0;
+  border-radius: 16px;
+  padding: 0 20px;
+  font: inherit;
+  font-weight: 700;
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--brand) 0%, var(--brand-dark) 100%);
+  cursor: pointer;
+}
+
+.form button:hover {
+  filter: brightness(1.04);
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .shell {
+    min-height: 70vh;
+  }
+}
